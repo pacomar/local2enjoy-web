@@ -16,6 +16,8 @@
 		<!-- endbower -->
 		<!-- inject:css -->
 
+		<link rel="stylesheet" href="/stylesheets/vendor/carousel.css">
+
 		<link rel="stylesheet" href="/stylesheets/main.css">
 
 		<!-- endinject -->
@@ -24,26 +26,36 @@
 
 
 	<body ng-app="web">
-		<header>
-			header
-		</header>
-		<div id="wrapper">
-			<nav id="navegador_lateral" ng-controller="HeaderController">
-				<ul>
-					<li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
-					<li ng-class="{ active: isActive('/news')}"><a href="/page2">Page 2</a></li>
-				</ul>
+		<div class="navbar-wrapper">
+			<div class="container">
+				<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Local2enjoy</a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+								<li ng-class="{ active: isActive('/page2')}"><a href="/page2">Page 2</a></li>
+							</ul>
+						</div>
+				</div>
 			</nav>
+		</div>
+		<div id="contenido" ng-view>
 
-			<div id="contenido" ng-view>
+		</div>
 
-			</div>
-
-			<!-- Site footer -->
-			<div class="footer">
-				<p>&copy; Local2enjoy 2014</p>
-
-		</div> <!-- /wrapper -->
+		<footer>
+			<p class="pull-right"><a href="#">Back to top</a></p>
+			<p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+		</footer>
 
 		<!--[if lt IE 8]>
 		<p class="browsehappy">
