@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<base href="/">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Local2enjoy</title>
+
+		<meta name="description" content="Pagina web de local2enjoy.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Francisco Martinez">
+		<!-- <link rel="icon" href="ico/favicon.ico"> -->
+		<!-- build:css css/style.min.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+		<!-- endbower -->
+		<!-- inject:css -->
+
+		<link rel="stylesheet" href="/stylesheets/main.css">
+
+		<!-- endinject -->
+		<!-- endbuild -->
+	</head>
+
+
+	<body ng-app="web">
+		<header>
+			header
+		</header>
+		<div id="wrapper">
+			<nav id="navegador_lateral" ng-controller="HeaderController">
+				<ul>
+					<li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+					<li ng-class="{ active: isActive('/news')}"><a href="/page2">Page 2</a></li>
+				</ul>
+			</nav>
+
+			<div id="contenido" ng-view>
+
+			</div>
+
+			<!-- Site footer -->
+			<div class="footer">
+				<p>&copy; Local2enjoy 2014</p>
+
+		</div> <!-- /wrapper -->
+
+		<!--[if lt IE 8]>
+		<p class="browsehappy">
+		Estas usando un navegador <strong>desactualizado</strong>.
+		Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a>
+		Para mejorar la experiencia..
+		</p>
+		<![endif]-->
+		<!-- build:js js/vendor.min.js -->
+		<!-- bower:js -->
+		<script src="lib/jquery/dist/jquery.js"></script>
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="lib/angular-route/angular-route.js"></script>
+        <script src="lib/angular-resource/angular-resource.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:js js/app.min.js -->
+		<!-- inject:js -->
+		<script src="/scripts/app.js"></script>
+		<script src="/scripts/controllers.js"></script>
+		<script src="/scripts/main.js"></script>
+		<script src="/scripts/services.js"></script>
+		<!-- endinject -->
+		<!-- endbuild -->
+	</body>
+</html>
