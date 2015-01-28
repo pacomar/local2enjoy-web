@@ -2,6 +2,7 @@
 
 .tmp
 .sass-cache
+.DS_Store
 dist
 wireframes
 node_modules
