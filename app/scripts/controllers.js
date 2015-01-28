@@ -21,10 +21,10 @@
     function HistoriaCtrl (Post) {
         this.posts = Post.query();
     }
-    function NosostrosCtrl (Post) {
+    function SignupCtrl (Post) {
         this.posts = Post.query();
     }
-    function NoticiasCtrl (Post) {
+    function LoginCtrl (Post) {
         this.posts = Post.query();
     }
 

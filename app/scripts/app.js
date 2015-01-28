@@ -16,6 +16,16 @@
 				templateUrl: 'views/page2.tpl.html',
 				controller: 'ContactoCtrl',
 				controllerAs: 'contact'
+			})
+			.when('/login', {
+				templateUrl: 'views/login.tpl.html',
+				controller: 'LoginCtrl',
+				controllerAs: 'login'
+			})
+			.when('/signup', {
+				templateUrl: 'views/signup.tpl.html',
+				controller: 'SignupCtrl',
+				controllerAs: 'signup'
 			});
 	}
 	angular
