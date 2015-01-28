@@ -56,16 +56,13 @@
 // bower:scss
 // endbower
 
-$color: white;
-
-body {
-  background: $color;
-  margin-top: 30px;
+.main-footer {
+  padding-top: $grid-gutter-width;
+  background-color: $gray-lighter;
 }
 
-.bg {
-  background: transparent url('../img/grunt.svg') left top no-repeat;
-  background-size: cover;
-  width: 240px;
-  height: 200px
+.copyright {
+  padding-top: $grid-gutter-width/2;
+  padding-bottom: $grid-gutter-width/4;
 }
+
