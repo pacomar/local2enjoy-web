@@ -1,0 +1,78 @@
+<div class="page-wrapper">
+
+  <l2e-navbar></l2e-navbar>
+
+  <l2e-hero></l2e-hero>
+
+  <div class="container-fluid">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h2>Hazte Traveler</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a class="btn btn-primary" href="#">Hazte Traveller</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <hr>
+  </div>
+
+  <div ng-controller="UsersCtrl as user">
+    <div class="container">
+      <div ng-repeat="traveller in user.traveller" class="col-sm-4 col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <img ng-src="{{ traveller.photo }}" class="img-circle">
+              {{ traveller.name }}
+            </h3>
+            <h4 class="h6 pull-left" style="margin: -8px 0  0 42px">{{ traveller.city }}</h4>
+          </div>
+          <div class="panel-body">
+            <p>{{ traveller.description | limitTo:148 }} &hellip;</p>
+          </div>
+          <div class="panel-footer">
+            <a class="btn btn-primary" href="#">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h2>Hazte Local</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a class="btn btn-primary" href="#">Hazte Local</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <hr>
+  </div>
+
+  <div ng-controller="UsersCtrl as user">
+    <div class="container">
+      <div ng-repeat="local in user.local" class="col-sm-4 col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <img ng-src="{{ local.photo }}" class="img-circle">
+              {{ local.name }}
+            </h3>
+            <h4 class="h6 pull-left" style="margin: -8px 0  0 42px">{{ local.city }}</h4>
+          </div>
+          <div class="panel-body">
+            <p>{{ local.description | limitTo:148 }} &hellip;</p>
+          </div>
+          <div class="panel-footer">
+            <a class="btn btn-primary" href="#">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <l2e-footer></l2e-footer>
+
+</div>
